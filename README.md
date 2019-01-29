@@ -5,5 +5,5 @@ A website created for the Christ New Creation International church in Wellington
 # Additional Info:
 
 * This website also serves as one of my portfolio websites to showcase my skill in web development.
-* I've used HTML5, CSS3, PHP and JavaScript (including some libraries) for this site.
+* I've used HTML5, CSS3, Sass, PHP and JavaScript (including some libraries) for this site.
 
