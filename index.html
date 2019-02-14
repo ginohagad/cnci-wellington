@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/style.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='https://www.google.com/recaptcha/api.js?render=6LevLI0UAAAAAD_hzsJZDxKL14lPkhNEl-sn_Y0Y'></script>
 	</head>
 	<body class="landing is-preload">
 
@@ -74,6 +75,20 @@
 								<h2>Contact Us</h2>
 								<p>Send us your testimonies, prayer requests or queries.</p>
 							</header>
+
+							<script>
+							$('form').submit(function() {
+								event.preventDefault();
+
+								grecaptcha.ready(function() {
+									grecaptcha.execute('6LevLI0UAAAAAD_hzsJZDxKL14lPkhNEl-sn_Y0Y', {action: 'contact_form'}).then(function(token) {
+										$('form').perpend('<input type="hidden" name="token" value="' + token + '">');
+										$('form').perpend('<input type="hidden" name="action" value="contact_form">');
+										$('form').unbind('submit').submit();
+									});
+								});
+																	;
+							 </script>
 							<form action="form_send.php" method="post">
 								<div>
 									<label for="name">Full name:</label>
